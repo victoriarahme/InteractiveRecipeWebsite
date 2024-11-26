@@ -56,29 +56,29 @@ body {
 /* Hero */
 .hero-section {
     text-align: center;
-    padding: 5rem 1rem;
+    padding: 3rem 1rem;
     background: url('hero-bg.jpg') no-repeat center center;
     background-size: cover;
     color: #fff;
 }
 
 .hero-section h1 {
-    font-size: 2.5rem;
+    font-size: 2rem;
     margin-bottom: 1rem;
     margin-top: 1rem;
     color: #ff5733;
 }
 
 .hero-section p {
-    font-size: 1.2rem;
+    font-size: 1rem;
     margin-bottom: 1.5rem;
     color: #ff5733;
-    border : 5px;
 }
 
 .search-form {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
 }
 
 .search-form input {
@@ -86,7 +86,9 @@ body {
     font-size: 1rem;
     border: none;
     border-radius: 5px 0 0 5px;
-    width: 400px;
+    width: 100%;
+    max-width: 400px;
+    margin-bottom: 1rem;
 }
 
 .search-form button {
@@ -105,9 +107,10 @@ body {
     color: #fff;
 }
 
-/* Section for Recipes */
+/* Recipes Section */
 .recipes-grid {
-    width: 1000px;
+    width: 100%;
+    max-width: 1000px;
     margin: 2rem auto;
     text-align: center;
     padding: 1rem;
@@ -120,7 +123,7 @@ body {
 
 .grid-container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 1.5rem;
 }
 
@@ -165,9 +168,10 @@ body {
     background-color: #ff704d;
 }
 
-/* Section Information*/
+/* About Section */
 #about {
-    width: 800px;
+    width: 100%;
+    max-width: 800px;
     margin: 2rem auto;
     text-align: center;
     padding: 1rem;
@@ -183,9 +187,10 @@ body {
     color: #555;
 }
 
-/* Section for contact Info */
+/* Contact Section */
 #contact {
-    width: 600px;
+    width: 100%;
+    max-width: 600px;
     margin: 2rem auto;
     text-align: center;
     padding: 1rem;
@@ -234,4 +239,30 @@ footer {
     padding: 1rem 0;
     margin-top: 2rem;
     font-size: 0.9rem;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .hero-section h1 {
+        font-size: 1.8rem;
+    }
+
+    .hero-section p {
+        font-size: 1rem;
+    }
+
+    .search-form {
+        flex-direction: column;
+    }
+
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
 }
