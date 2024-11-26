@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Recipe Website</title>
+    <!-- CSS  -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="site-header">
+        <nav class="navbar">
+            <a href="#" class="logo">RecipeHub</a>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#recipes">Recipes</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="home" class="hero-section">
+            <h1>Welcome to RecipeHub</h1>
+            <p>Discover, share, and create your favorite recipes.</p>
+            <form class="search-form">
+                <input type="text" placeholder="Search recipes..." name="search">
+                <button type="submit"><i class="fas fa-search"></i></button>
+            </form>
+        </section>
+        <section id="recipes" class="recipes-grid">
+            <h2>Featured Recipes</h2>
+            <div class="grid-container">
+                <!-- Recipe Cards -->
+                <div class="recipe-card">
+                    <img src="recipeImage.jpeg" alt="Recipe Image">
+                    <h3>Recipe Title</h3>
+                    <p>Short description of the recipe.</p>
+                    <a href="#" class="btn">View Recipe</a>
+                </div>
+                <!-- Cards for more Recipies -->
+            </div>
+        </section>
+        <section id="about">
+            <h2>About Us</h2>
+            <p>We aim to make cooking enjoyable and accessible for everyone.</p>
+        </section>
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <form class="contact-form">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" placeholder="Your Message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 RecipeHub. Project for Group 6.</p>
+    </footer>
+</body>
+</html>
