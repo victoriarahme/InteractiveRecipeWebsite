@@ -3,136 +3,134 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
 }
 
+/* Body Styling */
 body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
+    background: #f9f9f9;
     color: #333;
-    background-color: #f9f9f9;
+    line-height: 1.6;
 }
 
-/* Header Styling */
+/* Header */
 .site-header {
-    background-color: #ff5733;
-    color: #fff;
+    background: linear-gradient(90deg, #ff6f61, #ff9966);
+    color: white;
     padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 100%;
-    padding: 0 1rem;
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
 }
 
 .logo {
     font-size: 1.5rem;
     font-weight: bold;
     text-decoration: none;
-    color: #fff;
+    color: white;
 }
 
 .nav-links {
     list-style: none;
     display: flex;
-    gap: 1rem;
+}
+
+.nav-links li {
+    margin: 0 15px;
 }
 
 .nav-links a {
-    color: #fff;
     text-decoration: none;
-    font-size: 1rem;
-    padding: 0.5rem 1rem;
-    transition: background-color 0.3s;
+    color: white;
+    font-weight: bold;
+    transition: color 0.3s ease;
 }
 
 .nav-links a:hover {
-    background-color: #ff704d;
-    border-radius: 5px;
+    color: #ffe5d4;
 }
 
-/* Hero */
+/* Hero Section */
 .hero-section {
+    background: linear-gradient(90deg, #ff9966, #ff6f61);
     text-align: center;
-    padding: 3rem 1rem;
-    background: url('hero-bg.jpg') no-repeat center center;
-    background-size: cover;
-    color: #fff;
+    padding: 100px 20px;
+    color: white;
 }
 
 .hero-section h1 {
-    font-size: 2rem;
+    font-size: 2.5rem;
     margin-bottom: 1rem;
-    margin-top: 1rem;
-    color: #ff5733;
 }
 
 .hero-section p {
-    font-size: 1rem;
+    font-size: 1.2rem;
     margin-bottom: 1.5rem;
-    color: #ff5733;
 }
 
 .search-form {
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    justify-content: center;
 }
 
 .search-form input {
-    padding: 0.5rem;
+    padding: 0.8rem;
     font-size: 1rem;
     border: none;
     border-radius: 5px 0 0 5px;
-    width: 100%;
-    max-width: 400px;
-    margin-bottom: 1rem;
+    width: 300px;
 }
 
 .search-form button {
-    padding: 0.5rem;
+    padding: 0.8rem 1rem;
+    background: white;
+    color: #ff6f61;
     font-size: 1rem;
     border: none;
-    border-radius: 0 5px 5px 0;
-    background: #fff;
-    color: #ff5733;
     cursor: pointer;
-    transition: background-color 0.3s;
+    border-radius: 0 5px 5px 0;
+    transition: background 0.3s ease;
 }
 
 .search-form button:hover {
-    background-color: #ff704d;
-    color: #fff;
+    background: #ffe5d4;
 }
 
-/* Recipes Section */
+/* Recipes Grid */
 .recipes-grid {
-    width: 100%;
-    max-width: 1000px;
-    margin: 2rem auto;
-    text-align: center;
-    padding: 1rem;
+    padding: 50px 20px;
+    max-width: 1200px;
+    margin: auto;
 }
 
 .recipes-grid h2 {
-    margin-bottom: 1.5rem;
+    text-align: center;
+    margin-bottom: 20px;
     font-size: 2rem;
+    color: #ff6f61;
 }
 
 .grid-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 1.5rem;
+    gap: 20px;
 }
 
 .recipe-card {
-    background-color: #fff;
+    background: white;
     border-radius: 10px;
-    overflow: hidden;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    text-align: left;
+    overflow: hidden;
+    transition: transform 0.3s ease;
 }
 
 .recipe-card img {
@@ -142,127 +140,113 @@ body {
 }
 
 .recipe-card h3 {
-    margin: 1rem;
-    font-size: 1.2rem;
+    margin: 15px;
+    font-size: 1.5rem;
+    color: #ff6f61;
 }
 
 .recipe-card p {
-    margin: 0 1rem 1rem;
-    font-size: 1rem;
-    color: #666;
+    margin: 0 15px 15px;
+    color: #555;
 }
 
 .recipe-card .btn {
-    display: block;
-    text-align: center;
-    background-color: #ff5733;
-    color: #fff;
-    padding: 0.5rem;
-    margin: 1rem;
+    display: inline-block;
+    margin: 15px;
+    padding: 10px 20px;
+    color: white;
+    background: #ff6f61;
     text-decoration: none;
     border-radius: 5px;
-    transition: background-color 0.3s;
+    transition: background 0.3s ease;
 }
 
 .recipe-card .btn:hover {
-    background-color: #ff704d;
+    background: #ff9966;
+}
+
+.recipe-card:hover {
+    transform: translateY(-5px);
 }
 
 /* About Section */
 #about {
-    width: 100%;
-    max-width: 800px;
-    margin: 2rem auto;
+    padding: 50px 20px;
+    background: #ffe5d4;
     text-align: center;
-    padding: 1rem;
 }
 
 #about h2 {
-    margin-bottom: 1rem;
     font-size: 2rem;
+    margin-bottom: 20px;
+    color: #ff6f61;
 }
 
 #about p {
-    font-size: 1.2rem;
+    max-width: 800px;
+    margin: auto;
     color: #555;
+    line-height: 1.8;
 }
 
 /* Contact Section */
 #contact {
-    width: 100%;
-    max-width: 600px;
-    margin: 2rem auto;
-    text-align: center;
-    padding: 1rem;
+    padding: 50px 20px;
+    background: #f4f4f4;
 }
 
 #contact h2 {
-    margin-bottom: 1rem;
+    text-align: center;
     font-size: 2rem;
+    color: #ff6f61;
+    margin-bottom: 20px;
 }
 
 .contact-form {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
+    max-width: 600px;
+    margin: auto;
 }
 
 .contact-form input,
-.contact-form textarea {
+.contact-form textarea,
+.contact-form button {
     width: 100%;
-    padding: 0.8rem;
-    font-size: 1rem;
-    border: 1px solid #ddd;
+    margin: 10px 0;
+    padding: 15px;
+    border: 1px solid #ccc;
     border-radius: 5px;
 }
 
 .contact-form button {
-    padding: 0.8rem;
+    background: #ff6f61;
+    color: white;
     font-size: 1rem;
-    background-color: #ff5733;
-    color: #fff;
     border: none;
-    border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: background 0.3s ease;
 }
 
 .contact-form button:hover {
-    background-color: #ff704d;
+    background: #ff9966;
 }
 
 /* Footer */
 footer {
-    background-color: #333;
-    color: #fff;
     text-align: center;
-    padding: 1rem 0;
-    margin-top: 2rem;
-    font-size: 0.9rem;
+    padding: 20px;
+    background: #333;
+    color: white;
 }
 
-/* Responsive Adjustments */
-@media (max-width: 768px) {
-    .hero-section h1 {
-        font-size: 1.8rem;
-    }
-
-    .hero-section p {
-        font-size: 1rem;
-    }
-
-    .search-form {
-        flex-direction: column;
-    }
-
-    .navbar {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 1rem;
-    }
-
-    .nav-links {
-        flex-direction: column;
-        gap: 0.5rem;
-    }
+/* Canvas Styling */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('canvas-effect.jpg') center/cover no-repeat;
+    opacity: 0.1;
+    z-index: -1;
 }
