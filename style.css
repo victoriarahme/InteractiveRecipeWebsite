@@ -30,6 +30,7 @@ body {
     max-width: 1200px;
     margin: auto;
     padding: 0 20px;
+    flex-wrap: wrap;
 }
 
 .logo {
@@ -42,10 +43,11 @@ body {
 .nav-links {
     list-style: none;
     display: flex;
+    flex-wrap: wrap;
 }
 
 .nav-links li {
-    margin: 0 15px;
+    margin: 0 10px;
 }
 
 .nav-links a {
@@ -63,23 +65,24 @@ body {
 .hero-section {
     background: linear-gradient(90deg, #ff9966, #ff6f61);
     text-align: center;
-    padding: 100px 20px;
+    padding: 80px 20px;
     color: white;
 }
 
 .hero-section h1 {
-    font-size: 2.5rem;
+    font-size: 2rem;
     margin-bottom: 1rem;
 }
 
 .hero-section p {
-    font-size: 1.2rem;
+    font-size: 1rem;
     margin-bottom: 1.5rem;
 }
 
 .search-form {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 .search-form input {
@@ -87,17 +90,19 @@ body {
     font-size: 1rem;
     border: none;
     border-radius: 5px 0 0 5px;
-    width: 300px;
+    width: 100%;
+    max-width: 300px;
+    margin-bottom: 10px;
 }
 
 .search-form button {
-    padding: 0.8rem 1rem;
+    padding: 15px;
     background: white;
-    color: #ff6f61;
+    color: grey;
     font-size: 1rem;
-    border: none;
+    border: 10px;
     cursor: pointer;
-    border-radius: 0 5px 5px 0;
+    border-radius: 40%;
     transition: background 0.3s ease;
 }
 
@@ -115,13 +120,13 @@ body {
 .recipes-grid h2 {
     text-align: center;
     margin-bottom: 20px;
-    font-size: 2rem;
+    font-size: 1.8rem;
     color: #ff6f61;
 }
 
 .grid-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
 }
 
@@ -135,13 +140,13 @@ body {
 
 .recipe-card img {
     width: 100%;
-    height: 200px;
+    height: 150px;
     object-fit: cover;
 }
 
 .recipe-card h3 {
     margin: 15px;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     color: #ff6f61;
 }
 
@@ -177,13 +182,13 @@ body {
 }
 
 #about h2 {
-    font-size: 2rem;
+    font-size: 1.8rem;
     margin-bottom: 20px;
     color: #ff6f61;
 }
 
 #about p {
-    max-width: 800px;
+    max-width: 700px;
     margin: auto;
     color: #555;
     line-height: 1.8;
@@ -197,7 +202,7 @@ body {
 
 #contact h2 {
     text-align: center;
-    font-size: 2rem;
+    font-size: 1.8rem;
     color: #ff6f61;
     margin-bottom: 20px;
 }
@@ -249,4 +254,58 @@ body::before {
     background: url('canvas-effect.jpg') center/cover no-repeat;
     opacity: 0.1;
     z-index: -1;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero-section h1 {
+        font-size: 1.8rem;
+    }
+
+    .hero-section p {
+        font-size: 1rem;
+    }
+
+    .navbar {
+        flex-direction: column;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+    }
+
+    .recipes-grid h2 {
+        font-size: 1.5rem;
+    }
+
+    .recipe-card h3 {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-section h1 {
+        font-size: 1.5rem;
+    }
+
+    .hero-section p {
+        font-size: 0.9rem;
+    }
+
+    .search-form input {
+        width: 90%;
+    }
+
+    .recipes-grid h2 {
+        font-size: 1.2rem;
+    }
+
+    .recipe-card h3 {
+        font-size: 0.9rem;
+    }
 }
