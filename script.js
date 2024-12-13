@@ -1,8 +1,10 @@
+
 document.addEventListener("DOMContentLoaded", function() {
     alert("Welcome to RecipeHub!");
 });
 
-// Handling the form submission
+
+
 document.querySelector('.search-form').addEventListener('submit', function(event) {
     event.preventDefault();  // Prevents the form from reloading the page
 
