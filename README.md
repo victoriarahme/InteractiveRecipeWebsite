@@ -3,7 +3,7 @@
 RecipeHub interactive platform designed to inspire users in the kitchen by providing easy access to a variety of recipes. Its main purpose
 is to help users discover, share, and create their favorite recipes, making cooking an enjoyable and accessible experience for everyone!
 
-# Main Features
+# MAIN FEATURES
 
 Recipe Search: Quickly find recipes by name, dietary preference, or tags.
 
